@@ -1,0 +1,38 @@
+*{ padding: 0; margin: 0; }
+:root{
+/**	Primary **/
+--verydarkblue: hsl(233, 47%, 7%); /** main background **/
+--darkblue: hsl(244, 38%, 16%); /** card background **/
+--doftviolet: hsl(277, 64%, 61%); /** accent **/
+
+/** Neutral **/
+--white: hsl(0, 0%, 100%); /** main heading & stats **/
+--transparentwhite: hsla(0, 0%, 100%, 0.75); /** main paragraph **/
+--transparentwhite1: hsla(0, 0%, 100%, 0.6); /** stat headings **/
+}
+html, body{ height: 100%; }
+body{ font-size: 15px; background-color: var(--verydarkblue); color: var(--transparentwhite); font-family: 'Inter', sans-serif; }
+img{ width: 100%; height: auto; }
+h1{ font-family: 'Inter', sans-serif; font-size: 2.5em; color: var(--white); margin-bottom: 40px; }
+p{ font-family: 'Lexend Deca', sans-serif; color: var(--transparentwhite); margin-bottom: 40px; line-height: 1.8em; }
+#main{ display: flex; align-items: center; justify-content: center; height: 100%; }
+.container{ display: flex; border-radius: 15px; overflow: hidden; margin: 0 auto; }
+.card{ background: var(--darkblue); padding: 60px; max-width: 450px; }
+.card span{ color: var(--doftviolet); }
+.stats{ display: flex; justify-content: center; font-size: 1em; text-transform: uppercase; font-size: 0.8em; letter-spacing: 0.2em; }
+.stats div{ display: grid; width: 33.33%;}
+.stats strong{ font-size: 2em; color: var(--white); margin-bottom: 8px;  }
+	.banner{ display: flex; position: relative; background: url('../images/image-header-desktop.jpg') no-repeat; background-color: var(--doftviolet); background-blend-mode: multiply; background-size: cover;  background-position: center; width: 500px;  }
+	.overflow{ background:var(--doftviolet); opacity: 0.5; position: absolute; top:0; width: 100%; height: 100%; }
+	.attribution{ position: absolute; bottom: 0; text-align: center; font-size: 0.8em; }
+	.attribution a{color: var(--doftviolet);}
+ @media only screen and (max-width: 390px) {
+ 	h1{ font-size: 2em; }
+ 	#main{ display: block; }
+	.container{flex-flow: column; margin:20px; text-align: center;}
+	.card{ order:2; padding:40px 25px; }
+	.stats{ display: block; }
+	.stats div{ display: grid; margin-bottom: 40px; width: 100%;}
+	.banner{ order:1; width: 100%; height: 250px; }
+	.attribution{ position: relative; }
+}
